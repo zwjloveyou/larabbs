@@ -12,10 +12,12 @@ class UsersController extends Controller
 
     public function __construct()
     {
+        dd(123456);
         $this->middleware('auth', ['except' => ['show']]);
     }
     public function show(User $user)
     {
+
         return view('users.show', compact('user'));
     }
 
